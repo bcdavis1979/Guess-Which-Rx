@@ -45,10 +45,16 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cI8-vk-bMz">
                                 <rect key="frame" x="288" y="824" width="106" height="30"/>
                                 <state key="normal" title="About This App"/>
+                                <connections>
+                                    <action selector="showAbout:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QQq-II-rZI"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ryl-qA-maj">
                                 <rect key="frame" x="20" y="824" width="81" height="30"/>
                                 <state key="normal" title="Instructions"/>
+                                <connections>
+                                    <action selector="showInstructions:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Att-qh-QDP"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -67,6 +73,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="categoryTableView" destination="b8i-QA-Ubk" id="boY-P8-egb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
