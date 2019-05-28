@@ -16,6 +16,7 @@
 		6710AA1B229D630A00862CD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6710AA1A229D630A00862CD2 /* Assets.xcassets */; };
 		6710AA1E229D630A00862CD2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6710AA1C229D630A00862CD2 /* LaunchScreen.storyboard */; };
 		6710AA2A229D6BF300862CD2 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6710AA29229D6BF300862CD2 /* CategoryViewController.swift */; };
+		67F12E70229D862500641F2C /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F12E6F229D862500641F2C /* AboutViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		6710AA1D229D630A00862CD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6710AA1F229D630A00862CD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6710AA29229D6BF300862CD2 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		67F12E6F229D862500641F2C /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		876F3C7350A736AC3852EE2D /* Pods-Guess Which Rx.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Guess Which Rx.release.xcconfig"; path = "Target Support Files/Pods-Guess Which Rx/Pods-Guess Which Rx.release.xcconfig"; sourceTree = "<group>"; };
 		CB1BA0A30667399B8D80C300 /* Pods_Guess_Which_Rx.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Guess_Which_Rx.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -55,13 +57,13 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		670DA358229D7308001C8CB7 /* New Group */ = {
+		670DA358229D7308001C8CB7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				670DA356229D7304001C8CB7 /* Category.swift */,
 				670DA359229D7888001C8CB7 /* Drug.swift */,
 			);
-			path = "New Group";
+			path = Models;
 			sourceTree = "<group>";
 		};
 		6710AA07229D630700862CD2 = {
@@ -92,7 +94,7 @@
 				6710AA1C229D630A00862CD2 /* LaunchScreen.storyboard */,
 				6710AA1F229D630A00862CD2 /* Info.plist */,
 				67259C1A229D6ECA003BD00B /* Controllers */,
-				670DA358229D7308001C8CB7 /* New Group */,
+				670DA358229D7308001C8CB7 /* Models */,
 			);
 			path = "Guess Which Rx";
 			sourceTree = "<group>";
@@ -101,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				6710AA29229D6BF300862CD2 /* CategoryViewController.swift */,
+				67F12E6F229D862500641F2C /* AboutViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67F12E70229D862500641F2C /* AboutViewController.swift in Sources */,
 				6710AA16229D630700862CD2 /* ViewController.swift in Sources */,
 				6710AA2A229D6BF300862CD2 /* CategoryViewController.swift in Sources */,
 				6710AA14229D630700862CD2 /* AppDelegate.swift in Sources */,
