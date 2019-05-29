@@ -13,7 +13,7 @@ class TitleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Wait 5 seconds and then move on to mode selection
-        let _ = Timer.scheduledTimer(withTimeInterval: 5, repeats: false) { (timer) in
+        let _ = Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { (timer) in
             self.performSegue(withIdentifier: "selectMode", sender: nil)
         }
     }

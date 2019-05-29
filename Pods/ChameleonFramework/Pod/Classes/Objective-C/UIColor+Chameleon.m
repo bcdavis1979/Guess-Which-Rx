@@ -937,8 +937,8 @@
         case kCGColorSpaceModelDeviceN:
         case kCGColorSpaceModelIndexed:
         case kCGColorSpaceModelLab:
-        case kCGColorSpaceModelPattern:
         case kCGColorSpaceModelXYZ:
+        case kCGColorSpaceModelPattern:
         case kCGColorSpaceModelUnknown: {
             
             #ifdef DEBUG
