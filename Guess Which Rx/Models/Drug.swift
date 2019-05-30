@@ -12,6 +12,7 @@ import RealmSwift
 class Drug : Object {
     @objc dynamic var name : String = ""
     @objc dynamic var drugClass : String = ""
+    @objc dynamic var markedWrong : Bool = false
     
     var parentCategory = LinkingObjects(fromType: Category.self, property: "drugs")
 }

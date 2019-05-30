@@ -8,6 +8,7 @@
 
 import UIKit
 import RealmSwift
+import ChameleonFramework
 
 class CategoryViewController: UIViewController {
     
@@ -17,6 +18,7 @@ class CategoryViewController: UIViewController {
     var selectedCategory : Category?
 
     let initialCategories : [String] = ["Analgesics", "Antibiotics", "Antidepressants", "Antiepileptic", "Antipsychotic", "Narcotics", "Opioids", "OTC"]
+    let initialDrugs : [String] = ["Aspirin","Tylenol","Imodium","Zyrtec","Prozac","Wellbutrin","Zoloft","Motrin","Afrin","LSD","CBD","Mescaline","Heroin","Coumadin","Sudafed"]
     
 
     override func viewDidLoad() {
@@ -24,6 +26,7 @@ class CategoryViewController: UIViewController {
         
         loadCategories()
         if categories?.count ?? 0 == 0 { doInitialSetup() }
+        categoryTableView.separatorStyle = .none
     }
     
     // MARK: - IBOutlets
@@ -47,10 +50,17 @@ class CategoryViewController: UIViewController {
                 newCategory.name = category
                 try realm.write {
                     realm.add(newCategory)
+                    for drug in initialDrugs {
+                        let drugObj = Drug()
+                        drugObj.name = drug
+                        drugObj.drugClass = ""
+                        newCategory.drugs.append(drugObj)
+                        realm.add(drugObj)
+                    }
                 }
             }
         } catch {
-            print("Error saving categories to realm: \(error)")
+            print("Error saving categories and drugs to realm: \(error)")
         }
        categoryTableView.reloadData()
     }
@@ -65,6 +75,16 @@ class CategoryViewController: UIViewController {
             let destinationVC = segue.destination as! GameViewController
             destinationVC.gameMode = selectedGameMode
             destinationVC.currentCategory = selectedCategory
+            guard let drugList = selectedCategory?.drugs else { fatalError("No drugs in category") }
+            for drug in drugList {
+                do {
+                    try realm.write {
+                        drug.markedWrong = false
+                    }
+                } catch {
+                    print("Error clearing markedwrong flags")
+                }
+            }
             
         }
     }
@@ -78,6 +98,7 @@ extension CategoryViewController : UITableViewDelegate {
             selectedCategory = category
             performSegue(withIdentifier: "showGame", sender: nil)
         }
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
@@ -93,6 +114,11 @@ extension CategoryViewController : UITableViewDataSource {
         if let category = categories?[indexPath.row] {
             let cellLabel = category.name + "   (" + String(category.drugs.count) + ")"
             cell.textLabel?.text = cellLabel
+            
+            if let color = UIColor.flatSkyBlue.darken(byPercentage: (CGFloat(indexPath.row) / CGFloat(categories!.count)) * 0.75) {
+                cell.backgroundColor = color
+                cell.textLabel?.textColor = ContrastColorOf(color, returnFlat: true)
+            }
         } else {
             cell.textLabel?.text = "Unable to retrieve category from database"
         }
