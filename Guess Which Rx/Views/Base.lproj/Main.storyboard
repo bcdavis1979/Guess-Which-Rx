@@ -50,16 +50,23 @@
                                 <color key="textColor" red="0.98624199628829956" green="0.7796865701675415" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pills-1173653" translatesAutoresizingMaskIntoConstraints="NO" id="6Rs-ic-OwQ">
+                                <rect key="frame" x="16" y="326" width="343" height="315"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.15410047769546509" green="0.41306763887405396" blue="0.69063264131546021" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="CDn-rM-kAD" firstAttribute="leading" secondItem="f60-Lq-4Sx" secondAttribute="leading" constant="16" id="0Ms-ph-gWc"/>
+                            <constraint firstItem="f60-Lq-4Sx" firstAttribute="trailing" secondItem="6Rs-ic-OwQ" secondAttribute="trailing" constant="16" id="5QN-Gm-gbw"/>
                             <constraint firstItem="f60-Lq-4Sx" firstAttribute="trailing" secondItem="CDn-rM-kAD" secondAttribute="trailing" constant="16" id="CNp-M4-yy2"/>
                             <constraint firstItem="CDn-rM-kAD" firstAttribute="top" secondItem="f60-Lq-4Sx" secondAttribute="top" constant="100" id="EBg-TC-usV"/>
                             <constraint firstItem="f60-Lq-4Sx" firstAttribute="trailing" secondItem="AoM-GS-qmg" secondAttribute="trailing" constant="16" id="KMt-Rp-Iz0"/>
                             <constraint firstItem="guq-89-eTd" firstAttribute="leading" secondItem="f60-Lq-4Sx" secondAttribute="leading" constant="16" id="LGD-qd-Pr4"/>
                             <constraint firstItem="f60-Lq-4Sx" firstAttribute="trailing" secondItem="guq-89-eTd" secondAttribute="trailing" constant="16" id="LJK-YA-DjW"/>
+                            <constraint firstItem="6Rs-ic-OwQ" firstAttribute="top" secondItem="AoM-GS-qmg" secondAttribute="bottom" constant="50" id="N38-aj-7GE"/>
+                            <constraint firstItem="guq-89-eTd" firstAttribute="top" secondItem="6Rs-ic-OwQ" secondAttribute="bottom" constant="112" id="T4b-x4-ubL"/>
                             <constraint firstItem="guq-89-eTd" firstAttribute="bottom" secondItem="f60-Lq-4Sx" secondAttribute="bottom" id="XqI-ft-861"/>
+                            <constraint firstItem="6Rs-ic-OwQ" firstAttribute="leading" secondItem="f60-Lq-4Sx" secondAttribute="leading" constant="16" id="Zp8-3e-bSy"/>
                             <constraint firstItem="AoM-GS-qmg" firstAttribute="top" secondItem="CDn-rM-kAD" secondAttribute="bottom" constant="16" id="iZA-7y-eKv"/>
                             <constraint firstItem="AoM-GS-qmg" firstAttribute="leading" secondItem="f60-Lq-4Sx" secondAttribute="leading" constant="16" id="ySQ-sN-JX9"/>
                         </constraints>
@@ -71,7 +78,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d41-Xv-SuQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1062" y="143"/>
+            <point key="canvasLocation" x="-1063.2" y="142.61083743842366"/>
         </scene>
         <!--Mode View Controller-->
         <scene sceneID="Bv2-LQ-IJn">
@@ -81,7 +88,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fNI-fc-R4A">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fNI-fc-R4A" customClass="RoundedButton" customModule="Guess_Which_Rx" customModuleProvider="target">
                                 <rect key="frame" x="64" y="213.33333333333334" width="247" height="60.000000000000028"/>
                                 <color key="backgroundColor" red="0.23018704354763031" green="0.77713233232498169" blue="0.3158949613571167" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -91,11 +98,14 @@
                                 <state key="normal" title="Easy Mode">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="modePressed:" destination="E9Y-P5-edX" eventType="touchUpInside" id="LAe-zv-LDy"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="azc-21-4qV">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="azc-21-4qV" customClass="RoundedButton" customModule="Guess_Which_Rx" customModuleProvider="target">
                                 <rect key="frame" x="64" y="281.33333333333331" width="247" height="60"/>
                                 <color key="backgroundColor" red="0.97670525312423706" green="0.60546392202377319" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -105,6 +115,9 @@
                                 <state key="normal" title="Normal Mode">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="modePressed:" destination="E9Y-P5-edX" eventType="touchUpInside" id="SeT-5U-uRB"/>
                                 </connections>
@@ -115,7 +128,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ROu-CE-vAe">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ROu-CE-vAe" customClass="RoundedButton" customModule="Guess_Which_Rx" customModuleProvider="target">
                                 <rect key="frame" x="64" y="349.33333333333331" width="247" height="60"/>
                                 <color key="backgroundColor" red="0.67455112934112549" green="0.15692374110221863" blue="0.10914970934391022" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -125,6 +138,9 @@
                                 <state key="normal" title="Hard Mode">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="modePressed:" destination="E9Y-P5-edX" eventType="touchUpInside" id="ELS-IY-1Ov"/>
                                 </connections>
@@ -135,24 +151,30 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ryl-qA-maj">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ryl-qA-maj" customClass="RoundedButton" customModule="Guess_Which_Rx" customModuleProvider="target">
                                 <rect key="frame" x="16" y="742" width="150" height="30"/>
                                 <color key="backgroundColor" red="0.28728589415550232" green="0.1402067244052887" blue="0.30659055709838867" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Instructions">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="qhZ-y0-FdW" kind="popoverPresentation" popoverAnchorView="Ryl-qA-maj" id="AvQ-qL-3D3">
                                         <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                     </segue>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cI8-vk-bMz">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cI8-vk-bMz" customClass="RoundedButton" customModule="Guess_Which_Rx" customModuleProvider="target">
                                 <rect key="frame" x="209" y="742" width="150" height="30"/>
                                 <color key="backgroundColor" red="0.29085952043533325" green="0.20994566380977631" blue="0.14615128934383392" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="About">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="C0D-aS-efN" kind="popoverPresentation" popoverAnchorView="cI8-vk-bMz" id="mBg-Dh-Jeh">
                                         <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
@@ -296,7 +318,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="128" height="86"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WEc-dy-F8O">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WEc-dy-F8O">
                                                     <rect key="frame" x="1" y="1" width="126" height="84"/>
                                                     <color key="backgroundColor" red="0.15410047769999999" green="0.41306763889999998" blue="0.69063264130000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
@@ -328,12 +350,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zXY-PE-SCT">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zXY-PE-SCT" customClass="RoundedButton" customModule="Guess_Which_Rx" customModuleProvider="target">
                                 <rect key="frame" x="224.66666666666663" y="748" width="140.33333333333337" height="30"/>
                                 <color key="backgroundColor" red="0.85262101888656616" green="0.42218321561813354" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Quit Game">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="quitGame:" destination="lbz-EE-eib" eventType="touchUpInside" id="3oD-Sx-8PZ"/>
                                     <segue destination="E9Y-P5-edX" kind="show" identifier="quitGame1" id="vZF-qF-1Wk"/>
@@ -403,7 +428,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O6e-lK-Esv">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O6e-lK-Esv" customClass="RoundedButton" customModule="Guess_Which_Rx" customModuleProvider="target">
                                 <rect key="frame" x="89" y="610" width="197" height="45"/>
                                 <color key="backgroundColor" red="0.67455112934112549" green="0.15692374110221863" blue="0.10914970934391022" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -412,11 +437,14 @@
                                 <state key="normal" title="THIS IS NOT THE DRUG">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="notTheDrug:" destination="yCM-OY-Q9E" eventType="touchUpInside" id="HIG-cj-Yx6"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YXH-mm-UjJ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YXH-mm-UjJ" customClass="RoundedButton" customModule="Guess_Which_Rx" customModuleProvider="target">
                                 <rect key="frame" x="89" y="669" width="197" height="45"/>
                                 <color key="backgroundColor" red="0.23018704354763031" green="0.77713233232498169" blue="0.3158949613571167" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -425,6 +453,9 @@
                                 <state key="normal" title="This is the CORRECT Drug">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="correctDrugPicked:" destination="yCM-OY-Q9E" eventType="touchUpInside" id="RRf-C7-bFO"/>
                                 </connections>
@@ -435,12 +466,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W4j-7g-mgm">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W4j-7g-mgm" customClass="RoundedButton" customModule="Guess_Which_Rx" customModuleProvider="target">
                                 <rect key="frame" x="228.66666666666663" y="748" width="136.33333333333337" height="30"/>
                                 <color key="backgroundColor" red="0.85262101889999997" green="0.42218321559999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Quit Game">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="quitGame:" destination="lbz-EE-eib" eventType="touchUpInside" id="lxT-jx-hgX"/>
                                     <action selector="quitGame:" destination="yCM-OY-Q9E" eventType="touchUpInside" id="odh-d0-Deg"/>
@@ -569,6 +603,7 @@
     </scenes>
     <resources>
         <image name="icons8-back-filled-100" width="25" height="25"/>
+        <image name="pills-1173653" width="1000" height="625"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="4lg-an-KBQ"/>
