@@ -27,6 +27,7 @@
 		830DB2C4229EE0BF0064CE39 /* DrugCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830DB2C3229EE0BF0064CE39 /* DrugCollectionViewCell.swift */; };
 		830DB2C6229F16DD0064CE39 /* DrugDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830DB2C5229F16DD0064CE39 /* DrugDetailViewController.swift */; };
 		830DB2C822A0695C0064CE39 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830DB2C722A0695C0064CE39 /* RoundedButton.swift */; };
+		8397811122A347FC003BDF2D /* HintsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8397811022A347FC003BDF2D /* HintsCollectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		830DB2C3229EE0BF0064CE39 /* DrugCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugCollectionViewCell.swift; sourceTree = "<group>"; };
 		830DB2C5229F16DD0064CE39 /* DrugDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugDetailViewController.swift; sourceTree = "<group>"; };
 		830DB2C722A0695C0064CE39 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		8397811022A347FC003BDF2D /* HintsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintsCollectionView.swift; sourceTree = "<group>"; };
 		876F3C7350A736AC3852EE2D /* Pods-Guess Which Rx.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Guess Which Rx.release.xcconfig"; path = "Target Support Files/Pods-Guess Which Rx/Pods-Guess Which Rx.release.xcconfig"; sourceTree = "<group>"; };
 		CB1BA0A30667399B8D80C300 /* Pods_Guess_Which_Rx.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Guess_Which_Rx.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -130,6 +132,7 @@
 				830DB2C3229EE0BF0064CE39 /* DrugCollectionViewCell.swift */,
 				830DB2C5229F16DD0064CE39 /* DrugDetailViewController.swift */,
 				830DB2C722A0695C0064CE39 /* RoundedButton.swift */,
+				8397811022A347FC003BDF2D /* HintsCollectionView.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 				67FB2B18229DB5BE007D475A /* TitleViewController.swift in Sources */,
 				67240EA4229DA66100CFBE87 /* ModeViewController.swift in Sources */,
 				670DA35A229D7888001C8CB7 /* Drug.swift in Sources */,
+				8397811122A347FC003BDF2D /* HintsCollectionView.swift in Sources */,
 				670DA357229D7304001C8CB7 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

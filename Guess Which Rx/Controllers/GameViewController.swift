@@ -76,7 +76,7 @@ class GameViewController: UIViewController {
     
     @IBOutlet weak var timeTaken: UILabel!
     
-    @IBOutlet weak var questionLabel: UILabel!
+    
     
     @IBOutlet weak var collectionView: UICollectionView!
     
